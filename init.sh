@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# ZSH
+# basic utils
 sudo apt-get update && sudo apt-get install build-essential make
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp .vimrc .zshrc ~
 
 # hping3
 sudo apt-get install hping3
