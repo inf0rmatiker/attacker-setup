@@ -19,14 +19,14 @@ if [[ $# -ge 2 ]]; then
 
     "2")
       echo -e "Running attack from attackers 1 and 2...\nCommand: $COMMAND"
-      ssh -i $ATTACKER_2_KEY $ATTACKER_2 $COMMAND
+      ssh -i $ATTACKER_2_KEY $ATTACKER_2 $COMMAND &
       eval $COMMAND
       ;;
 
     "3")
       echo -e "Running attack from attackers 1, 2, and 3...\nCommand: $COMMAND"
-      ssh -i $ATTACKER_2_KEY $ATTACKER_2 $COMMAND
-      ssh -i $ATTACKER_3_KEY $ATTACKER_3 $COMMAND
+      ssh -i $ATTACKER_2_KEY $ATTACKER_2 $COMMAND &
+      ssh -i $ATTACKER_3_KEY $ATTACKER_3 $COMMAND &
       eval $COMMAND
       ;;
 
