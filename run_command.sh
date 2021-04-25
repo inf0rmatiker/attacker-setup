@@ -2,6 +2,7 @@
 
 function print_usage {
   echo -e "\n\tUsage: ./run_command.sh <num_attackers> <command>\n"
+  echo -e "\tExample: ./run_command.sh 3 \"sudo kill \\\$( sudo ps -aux | grep sock | awk '{ print \\\$2 }')\""
 }
 
 if [[ $# -ge 2 ]]; then
